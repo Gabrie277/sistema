@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoria em Licitação</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        #home {
+            background: #35424a;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        #home h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+
+        #about, #services, #contact {
+            background: #fff;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin-bottom: 5px;
+        }
+
+        form input, form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre Nós</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Bem-vindo à Nossa Consultoria</h1>
+        <p>Especialistas em Licitação e Contratos Públicos.</p>
+    </section>
+
+    <section id="about">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma empresa dedicada a fornecer assessoria completa em processos licitatórios.</p>
+    </section>
+
+    <section id="services">
+        <h2>Nossos Serviços</h2>
+        <ul>
+            <li>Consultoria em Licitação</li>
+            <li>Análise de Editais</li>
+            <li>Elaboração de Propostas</li>
+            <li>Gestão de Contratos Públicos</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contato</h2>
+        <form id="contactForm">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Enviar</button><br><br><br>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Consultoria em Licitação. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("Script carregado com sucesso!");
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                let name = document.getElementById('name').value;
+                let email = document.getElementById('email').value;
+                let message = document.getElementById('message').value;
+
+                let whatsappUrl = `https://api.whatsapp.com/send?phone=5598985974981&text=Nome:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0AMensagem:%20${encodeURIComponent(message)}`;
+
+                window.open(whatsappUrl, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
