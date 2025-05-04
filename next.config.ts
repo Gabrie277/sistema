@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-export default nextConfig;
+module.exports = {
+  images: {
+    domains: [
+      'randomuser.me',
+      'mediconutrologorj.com.br',
+      'images.tcdn.com.br', // Adicionando esse domínio
+    ],
+  },
+}
