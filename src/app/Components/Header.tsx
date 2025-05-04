@@ -35,12 +35,12 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href="#projects" className="flex items-center gap-1 hover:text-blue-400 transition">
+              <Link href="http://localhost:3000/#projects" className="flex items-center gap-1 hover:text-blue-400 transition">
                 <FaLeaf /> Produtos
               </Link>
             </li>
             <li>
-              <Link href="#contact" className="flex items-center gap-1 hover:text-blue-400 transition">
+              <Link href="http://localhost:3000/#contact" className="flex items-center gap-1 hover:text-blue-400 transition">
                 <FaEnvelope /> Comentários
               </Link>
             </li>
@@ -75,7 +75,7 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href="#contact"
+                href="http://localhost:3000/#contact"
                 className="flex items-center gap-3 hover:text-blue-400"
                 onClick={toggleMenu}
               >
