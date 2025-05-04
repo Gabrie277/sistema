@@ -7,7 +7,7 @@ import { FaBars, FaTimes, FaHome, FaLeaf, FaEnvelope } from 'react-icons/fa';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(prev => !prev); // Alternar entre aberto/fechado
+  const toggleMenu = () => setIsOpen(prev => !prev);
 
   return (
     <header className="bg-gray-800 text-white fixed top-0 left-0 w-full z-50 shadow">
@@ -15,18 +15,18 @@ const Header = () => {
         {/* Logo */}
         <h1 className="text-2xl md:text-3xl font-bold">Farma Estimulantes</h1>
 
-        {/* Botão para abrir o menu (mobile) */}
+        {/* Botão do menu mobile */}
         <button
           onClick={toggleMenu}
           className="md:hidden text-white text-2xl"
-          aria-label="Abrir menu"
+          aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
         >
-          <FaBars />
+          {isOpen ? <FaTimes /> : <FaBars />}
         </button>
 
-        {/* Navegação Desktop */}
+        {/* Menu Desktop */}
         <nav className="hidden md:block">
           <ul className="flex space-x-6 text-lg">
             <li>
@@ -40,7 +40,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href="http://localhost:3000/#contact" className="flex items-center gap-1 hover:text-blue-400 transition">
+              <Link href="#contact" className="flex items-center gap-1 hover:text-blue-400 transition">
                 <FaEnvelope /> Comentários
               </Link>
             </li>
@@ -50,24 +50,16 @@ const Header = () => {
 
       {/* Menu Mobile */}
       {isOpen && (
-        <div id="mobile-menu" className="md:hidden fixed inset-0 bg-gray-900 bg-opacity-95 p-6 z-50 transition-all">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-2xl font-bold">Menu</h2>
-            <button
-              onClick={toggleMenu}
-              className="text-white text-2xl"
-              aria-label="Fechar menu"
-            >
-              <FaTimes />
-            </button>
-          </div>
-
+        <div
+          id="mobile-menu"
+          className="md:hidden fixed inset-0 bg-gray-900 bg-opacity-95 p-6 z-50"
+        >
           <ul className="space-y-6 text-xl">
             <li>
               <Link
                 href="/"
                 className="flex items-center gap-3 hover:text-blue-400"
-                onClick={toggleMenu} // Fecha o menu ao clicar
+                onClick={toggleMenu}
               >
                 <FaHome /> Início
               </Link>
@@ -83,7 +75,7 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href="http://localhost:3000/#contact"
+                href="#contact"
                 className="flex items-center gap-3 hover:text-blue-400"
                 onClick={toggleMenu}
               >
