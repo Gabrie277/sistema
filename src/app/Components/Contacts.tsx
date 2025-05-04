@@ -9,19 +9,19 @@ const Contacts = () => {
       name: 'Carlos Eduardo',
       comment:
         'O Farma Estimulantes superou minhas expectativas! Conteúdo confiável e uma navegação intuitiva. Recomendo muito!',
-      image: 'https://randomuser.me/api/portraits/men/32.jpg',
+      image: '/p1.jpg', // caminho ajustado
     },
     {
       name: 'Juliana Silva',
       comment:
         'Simplesmente adorei! O site tem um design lindo e as informações são muito úteis. Uso como referência todos os dias.',
-      image: 'https://randomuser.me/api/portraits/women/44.jpg',
+      image: '/p2.jpg', // caminho ajustado
     },
     {
       name: 'Fernanda Rocha',
       comment:
         'Farma Estimulantes é o melhor lugar para aprender sobre estimulantes naturais. Tudo muito bem explicado!',
-      image: 'https://randomuser.me/api/portraits/women/68.jpg',
+      image: '/p3.jpg', // caminho ajustado
     },
   ];
 

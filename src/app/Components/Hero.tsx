@@ -33,7 +33,7 @@ const Hero = () => {
             Farma Estimulantes
           </h1>
           <p className="text-xl mb-6 text-white">
-            Desenvolvedor Web apaixonado por criar interfaces incríveis e experiências digitais impactantes.
+                É natural e mais saudável!
           </p>
         </div>
       </div>
